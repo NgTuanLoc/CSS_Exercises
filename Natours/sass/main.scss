@@ -6,6 +6,14 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-gray-dark: #777;
+$color-white: white;
+$color-black: black;
+
 *,
 *::after,
 *::before {
@@ -22,8 +30,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7;
-  /* 1.7 times higher than usual */
+  line-height: 1.7; /* 1.7 times higher than usual */
   color: #777;
   padding: 3rem;
   box-sizing: border-box;
@@ -31,18 +38,20 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img//hero.jpg");
-  background-size: cover;
-  /* scale and fit image background */
-  background-position: top;
-  /* prevent background cropped out at top */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img//hero.jpg");
+  background-size: cover; /* scale and fit image background */
+  background-position: top; /* prevent background cropped out at top */
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .logo-box {
-  position: absolute;
-  /* header is the parent */
+  position: absolute; /* header is the parent */
   top: 4rem;
   left: 4rem;
 }
@@ -53,17 +62,16 @@ body {
 
 .text-box {
   position: absolute;
-  top: 40%;
-  /* to the parent */
+  top: 40%; /* to the parent */
   left: 50%;
-  transform: translate(-50%, -50%);
-  /* not for parent but the element */
+  transform: translate(-50%, -50%); /* not for parent but the element */
   text-align: center;
 }
 
 .heading-primary {
-  color: white;
+  color: $color-white;
   text-transform: uppercase;
+
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
@@ -73,13 +81,15 @@ body {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
   animation-name: moveInLeft;
   animation-duration: 4s;
   animation-timing-function: ease-out;
+
   /* 
     animation-delay: 3s; 
     animation-iteration-count: 3;
-
+    
     */
 }
 
@@ -88,6 +98,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.8rem;
+
   margin-bottom: 4rem;
   animation: moveInRight 4s ease-out;
 }
@@ -99,29 +110,36 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   80% {
     transform: translate(2rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 @keyframes moveInRight {
   /* Start */
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   80% {
     transform: translate(-2rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 /* psudo class => state of the element => special condition */
+
 /* initial state */
 .btn:link,
 .btn:visited {
@@ -137,16 +155,16 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
 }
 
 .btn:active {
   transform: translateY(0.1rem);
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem .5rem 1rem rgba($color-black, 0.2);
 }
 
 .btn-white {
-  background-color: white;
+  background-color: $color-white;
   color: #777;
 }
 
@@ -164,7 +182,7 @@ body {
 }
 
 .btn-white::after {
-  background-color: white;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
@@ -178,14 +196,15 @@ body {
     opacity: 0;
     transform: translateY(3rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
 
-/*# sourceMappingURL=style.css.map */
