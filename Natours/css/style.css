@@ -4,7 +4,6 @@ COLORS:
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
 /* Css animation */
 @keyframes moveInLeft {
@@ -111,7 +110,7 @@ body {
   letter-spacing: 2px;
   background-clip: text;
   color: transparent;
-  transition: all 0.3s;
+  transition: all 0.6s;
 }
 .heading-secondary:hover {
   transform: skewY(1.2deg) skewX(5deg) scale(1.1);
@@ -296,6 +295,69 @@ body {
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.1);
 }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+}
+.card__side {
+  background-color: #ff7979;
+  height: 50rem;
+  border-radius: 7px;
+  transition: all 2s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 3.5rem 4rem rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.card__side--front {
+  background-color: white;
+}
+.card__side--back {
+  transform: rotateY(-180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom, #55c57a, #28b485);
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: soft-light;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg);
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right bottom, #55c57a, #28b485), url(../../img/nat-6.jpg);
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7.jpg);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -312,6 +374,12 @@ body {
 }
 .section-feature > * {
   transform: skewY(7deg);
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
 }
 
 .row {
