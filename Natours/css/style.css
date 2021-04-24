@@ -139,11 +139,15 @@ body {
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem;
 }
 
 .header {
@@ -212,6 +216,13 @@ body {
 }
 .btn--white::after {
   background-color: white;
+}
+.btn--green {
+  background-color: #28b485;
+  color: white;
+}
+.btn--green::after {
+  background-color: #28b485;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -299,7 +310,7 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 50rem;
+  height: 48rem;
   position: relative;
 }
 .card__side {
@@ -435,7 +446,7 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 50rem 0;
-  margin-top: -10rem;
+  margin-top: -15rem;
 }
 
 .row {
