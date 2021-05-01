@@ -54,6 +54,7 @@ body {
   );
   letter-spacing: 2px;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   transition: all 0.6s;
 
