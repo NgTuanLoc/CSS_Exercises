@@ -135,7 +135,7 @@
   }
 
   &__details {
-    padding: 3rem;
+    padding: 1rem;
 
     ul {
       list-style: none;
@@ -224,8 +224,8 @@
       }
     }
 
-    &__details{
-      padding: 4rem;
+    &__details {
+      padding: 2rem;
     }
 
     &:hover &__side--front {
@@ -239,7 +239,7 @@
     // FRONT SIDE STYLING
     &__cta {
       position: relative;
-      padding: 8rem 4rem 4rem 4rem;
+      padding: 4rem 3rem 3rem 3rem;
       top: 0;
       left: 0;
       transform: translate(0);
@@ -247,17 +247,17 @@
     }
 
     &__price-box {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     &__price-only {
-      font-size: 5rem;
+      font-size: 4rem;
       text-transform: uppercase;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     &__price-value {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 }
