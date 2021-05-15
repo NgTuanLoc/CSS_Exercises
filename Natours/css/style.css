@@ -5,6 +5,17 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 */
+/*
+  0-600 (Phone) 
+  -> 600-900 ( Tablet portrait ) 
+  -> 900-1200 (Tablet Landscape) 
+  -> 1200-1800 (Desktop)
+  -> 1800+ (Big desktop) 
+
+  break-point argument: phone, tab-port, tab-land, big-desktop
+
+  Order : base + typography > general layout + grid > page layout > components
+*/
 /* Css animation */
 @keyframes moveInLeft {
   /* Start */
@@ -57,9 +68,35 @@ Dark green: #28b485
 html {
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 37.5em) {
+  body {
+    padding: 0px;
+  }
 }
 
 body {
@@ -69,7 +106,6 @@ body {
   line-height: 1.7;
   /* 1.7 times higher than usual */
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -92,6 +128,12 @@ body {
 
       */
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-family: 5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -99,6 +141,11 @@ body {
   letter-spacing: 1.8rem;
   margin-bottom: 4rem;
   animation: moveInRight 4s ease-out;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -327,6 +374,7 @@ body {
   width: 100%;
   box-shadow: 0 3.5rem 4rem rgba(0, 0, 0, 0.2);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   overflow: hidden;
 }
 .card__side--front {
@@ -585,6 +633,7 @@ body {
   z-index: 400;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
   transition: all 1s;
 }
 .popup:target {
