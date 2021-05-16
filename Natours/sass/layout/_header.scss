@@ -2,10 +2,19 @@
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.5),
-      rgba($color-primary-dark, 0.6)
+      rgba($color-primary-light, 0.2),
+      rgba($color-primary-dark, 0.3)
     ),
-    url("../img//hero.jpg");
+    url("../img//hero-small.jpg");
+
+    @media (min-resolution:191dpi) and (min-width: 37.5em), (min-width: 125em){
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.2),
+        rgba($color-primary-dark, 0.3)
+      ),
+      url("../img//hero.jpg");
+    }
   background-size: cover; /* scale and fit image background */
   background-position: top; /* prevent background cropped out at top */
   position: relative;
