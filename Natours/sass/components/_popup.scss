@@ -77,6 +77,15 @@
     column-count: 2;
     column-gap: auto;
     column-rule: 1px solid $color-gray-dark-2;
+
+    -moz-column-count: 2;
+    -moz-column-gap: auto;
+    -moz-column-rule: 1px solid $color-gray-dark-2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+
     hyphens: auto;
   }
 }

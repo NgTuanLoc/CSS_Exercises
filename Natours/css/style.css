@@ -645,7 +645,9 @@ body {
 }
 @media (max-width: 37.5em) {
   .story__shape {
-    transform: translateX(-3rem) skewX(0);
+    transform: translateX(3rem) skewX(0);
+    display: block;
+    float: none;
   }
 }
 .story__img {
@@ -853,6 +855,12 @@ body {
   column-count: 2;
   column-gap: auto;
   column-rule: 1px solid #999;
+  -moz-column-count: 2;
+  -moz-column-gap: auto;
+  -moz-column-rule: 1px solid #999;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 
