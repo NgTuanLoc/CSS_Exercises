@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concat": "^1.0.3",
     "sass": "^1.32.11"
   }
 }
