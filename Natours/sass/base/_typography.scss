@@ -51,6 +51,7 @@ body {
 }
 
 .heading-secondary {
+  padding: 0 5rem;
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -60,15 +61,15 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
-  letter-spacing: 2px;
   background-clip: text;
   -webkit-background-clip: text;
+  letter-spacing: 2px;
   color: transparent;
   transition: all 0.6s;
 
   @include respond(tab-port) {
     font-size: 3rem;
-    &--span{
+    &--span {
       display: block;
     }
   }
@@ -79,7 +80,7 @@ body {
 
   &:hover {
     transform: skewY(1.2deg) skewX(5deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color: #000000, $alpha: 0.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(#000000, 0.1);
   }
 }
 
