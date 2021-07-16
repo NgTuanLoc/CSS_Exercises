@@ -39,4 +39,50 @@ body {
   min-height: 100vh;
 }
 
+.logo {
+  height: 3.5rem;
+}
+
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%;
+}
+.container {
+  max-width: 120rem;
+  margin: 6rem auto;
+  background-color: var(--color-gray-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: white;
+  border-bottom: var(--color-gray-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-gray-dark-1);
+  flex: 0 0 18%;
+}
+
+.hotel-view {
+  background-color: white;
+  background-color: orangered;
+  flex: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
