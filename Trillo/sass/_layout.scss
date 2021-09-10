@@ -36,19 +36,22 @@
 
 .detail {
   display: flex;
+  font-size: 1.4rem;
   padding: 3rem;
   background-color: var(--color-gray-light-1);
   border-bottom: var(--line);
 }
 .description {
-  background-color: yellowgreen;
-  font-size: 1.4rem;
+  background-color: white;
   flex: 0 0 60%;
   margin-right: 3rem;
   padding: 3rem;
   box-shadow: var(--shadow-light);
 }
 .user-reviews {
-  background-color: blueviolet;
   flex: 1;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
 }
