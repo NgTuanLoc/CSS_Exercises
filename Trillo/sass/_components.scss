@@ -10,6 +10,13 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    margin: 1.5rem;
+    margin: 0 auto;
+    flex: 0 0 95%;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -99,6 +106,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: $bp-small) {
+      top: 0.1rem;
+    }
   }
   &__user-photo {
     height: 3.75rem;
@@ -110,14 +120,25 @@
 // SIDE NAVIGATION
 .side-nav {
   font-size: 1.4rem;
-
   list-style: none;
   margin-top: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
   &__item::before {
@@ -154,12 +175,25 @@
     z-index: 10;
     align-items: center;
     padding: 2rem 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      padding: 1rem;
+    }
   }
   &__icon {
     height: 2rem;
     width: 2rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -169,6 +203,10 @@
   color: var(--color-gray-light-3);
   text-align: center;
   padding: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 // GALLERY
@@ -187,6 +225,20 @@
   align-items: center;
   &__heading {
     margin-left: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.3rem;
+      padding: 0.5rem;
+      margin: 0;
+    }
   }
   &__stars {
     display: flex;
@@ -197,6 +249,11 @@
     height: 1.75rem;
     width: 1.75rem;
     fill: var(--color-primary-light);
+
+    @media only screen and (max-width: $bp-small) {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
   }
 
   &__location {
@@ -216,15 +273,27 @@
     flex-direction: column;
     align-items: center;
     align-self: stretch;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -0.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -319,6 +388,10 @@
     margin-right: auto;
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     box-sizing: content-box;
     height: 5rem;
@@ -326,7 +399,7 @@
     border-radius: 50%;
     border: 3px solid white;
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -339,6 +412,9 @@
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -435,13 +511,14 @@
     top: 100%;
   }
 
-&:hover{
-  background-image: linear-gradient(
-    to left,
-    var(--color-primary-light),
-    var(--color-primary-dark)
-  );
-}
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    cursor: pointer;
+  }
 
   &:hover &__visible {
     transform: translateY(100%);
@@ -450,8 +527,7 @@
     top: 0;
   }
 
-  &:focus{
-    
+  &:focus {
     outline: none;
     animation: pulsate 1s infinite;
   }
