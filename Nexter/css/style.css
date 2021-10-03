@@ -17,9 +17,19 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vh repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    font-size: 4rem;
-    padding: 40px; }
+
+.heading-1, .heading-2, .heading-3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 2rem; }
+  .heading-4--dark {
+    color: #54483a; }
+  .heading-4--light {
+    color: #f9f7f6; }
 
 .sidebar {
   background-color: #c69963;
@@ -35,8 +45,25 @@ body {
   grid-column: col-end 6 / full-end; }
 
 .features {
-  background-color: #f9f7f6;
-  grid-column: center-start/ center-end; }
+  grid-column: center-start/ center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem; }
+  .feature__icon {
+    fill: #c69963;
+    height: 4.5rem;
+    width: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.5rem; }
 
 .story__pictures {
   background-color: #c69963;
