@@ -29,9 +29,27 @@
   }
 
   &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    font-size: 1.6rem;
+    grid-column-gap: 2rem;
+    align-items: center;
+    color: $color-gray-light-2;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+    }
   }
   &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-content: center;
     img {
+      filter: brightness(70%);
       height: 2.5rem;
     }
   }
