@@ -3,16 +3,26 @@
   grid-column: col-start 7 / full-end;
   padding: 3rem;
   display: grid;
-  justify-content: center;
+  align-content: center;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   grid-row-gap: 2rem;
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+  }
 
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     grid-column-gap: 3rem;
     grid-row-gap: 5vh;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
